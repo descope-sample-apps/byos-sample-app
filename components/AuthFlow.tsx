@@ -33,18 +33,10 @@ export default function AuthFlow() {
 
   const handleGoogleAuth = async () => {
     if (state.next) {
-      // Create a separate object for Google auth that explicitly does NOT include email
       const googleData = { provider: 'google' };
-
-      try {
-        // Clear the form state to avoid carrying over email
-        setForm({ provider: 'google' });
-
-        // Call next with the Google data
-        await state.next('google', googleData);
-      } catch (error) {
-        console.error("Google auth error:", error);
-      }
+      setForm({ provider: 'google' });
+      // Call next with the Google data
+      await state.next('google', googleData);
     }
   };
 
@@ -60,7 +52,6 @@ export default function AuthFlow() {
       onSuccess={() => {
         console.log("success")
         setState((prevState) => ({ ...prevState }))
-        // Redirect to dashboard on successful authentication
         router.push("/dashboard")
       }}
     >
@@ -81,6 +72,7 @@ export default function AuthFlow() {
       {state?.screenName === pollingScreenName &&
         <MagicLinkPolling
           email={form.email || ''}
+          state={state}
           onResendClick={async () => {
             if (state.next) {
               await state.next('resend', form)
@@ -98,9 +90,7 @@ export default function AuthFlow() {
         <AuthSuccess
           userName={form.email?.split('@')[0]}
           onContinue={() => {
-            if (state.next) {
-              state.next('polling', {})
-            }
+            router.push("/dashboard")
           }}
         />}
 

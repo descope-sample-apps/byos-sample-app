@@ -10,9 +10,7 @@ interface AuthSuccessProps {
 }
 
 export default function AuthSuccess({ userName, onContinue }: AuthSuccessProps) {
-  const router = useRouter()
   const [animationComplete, setAnimationComplete] = useState(false)
-  const [redirectCountdown, setRedirectCountdown] = useState(5)
 
   // Handle success animation completion
   useEffect(() => {
@@ -22,19 +20,6 @@ export default function AuthSuccess({ userName, onContinue }: AuthSuccessProps) 
 
     return () => clearTimeout(animationTimer)
   }, [])
-
-  // Auto-redirect countdown
-  useEffect(() => {
-    if (animationComplete && redirectCountdown > 0) {
-      const countdownTimer = setTimeout(() => {
-        setRedirectCountdown(redirectCountdown - 1)
-      }, 1000)
-
-      return () => clearTimeout(countdownTimer)
-    } else if (animationComplete && redirectCountdown === 0) {
-      onContinue()
-    }
-  }, [animationComplete, redirectCountdown, onContinue])
 
   const displayName = userName || "there"
 
@@ -59,16 +44,10 @@ export default function AuthSuccess({ userName, onContinue }: AuthSuccessProps) 
         <div className={`success-content ${animationComplete ? "visible" : ""}`}>
           <h2>Authentication Successful!</h2>
           <p className="welcome-message">Welcome back, {displayName}!</p>
-          <p className="redirect-message">
-            You'll be redirected to your dashboard in <span className="countdown">{redirectCountdown}</span> seconds
+          <p className="tab-instruction">
+            You are now authenticated. You can now close this tab.
           </p>
 
-          <button className="continue-button" onClick={onContinue}>
-            <span>Continue to Dashboard</span>
-            <svg viewBox="0 0 24 24">
-              <path d="M12,4l-1.41,1.41L16.17,11H4v2h12.17l-5.58,5.59L12,20l8-8L12,4z" />
-            </svg>
-          </button>
         </div>
       </div>
 

@@ -264,6 +264,55 @@
     }
   }
   
+  /* Verification check animation */
+  .verification-check {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    animation: checkAppear 0.5s cubic-bezier(0.22, 0.68, 0, 1.71) forwards;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    z-index: 10;
+  }
+  
+  .verification-check svg {
+    width: 36px;
+    height: 36px;
+    fill: white;
+  }
+  
+  @keyframes checkAppear {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .magic-link-animation.verified .envelope {
+    animation: verifiedFloat 1s forwards;
+  }
+  
+  @keyframes verifiedFloat {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+  
   .instructions {
     text-align: center;
     margin-bottom: 30px;
@@ -273,6 +322,14 @@
     font-size: 14px;
     color: #6b7280;
     margin: 0 0 8px 0;
+  }
+  
+  .success-message {
+    font-size: 16px !important;
+    color: #10b981 !important;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    animation: fadeIn 0.5s ease;
   }
   
   .error-message {
@@ -372,10 +429,15 @@
     transition: all 0.2s;
   }
   
-  .back-button:hover {
+  .back-button:hover:not(:disabled) {
     background-color: #f9fafb;
     border-color: #d1d5db;
     color: #6366f1;
+  }
+  
+  .back-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   
   .back-button svg {

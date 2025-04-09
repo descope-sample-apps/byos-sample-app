@@ -230,49 +230,15 @@
   }
   
   .redirect-message {
-    font-size: 14px;
+    font-size: 16px;
     color: #6b7280;
-    margin: 0 0 25px 0;
+    margin: 0;
   }
   
   .countdown {
     font-weight: 600;
     color: #6366f1;
-    font-size: 16px;
-  }
-  
-  .continue-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 56px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-  }
-  
-  .continue-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
-  }
-  
-  .continue-button svg {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    fill: white;
-    transition: transform 0.3s;
-  }
-  
-  .continue-button:hover svg {
-    transform: translateX(4px);
+    font-size: 18px;
   }
   
   .background-shapes {

@@ -4,13 +4,20 @@ import { useState, useEffect } from "react"
 import "./magicLinkPolling.css"
 
 interface MagicLinkPollingProps {
-  email: string
-  onResendClick: () => void
-  onBackClick: () => void
-  errorText?: string
+  email: string;
+  state: any;
+  onResendClick: () => void;
+  onBackClick: () => void;
+  errorText?: string;
 }
 
-export default function MagicLinkPolling({ email, onResendClick, onBackClick, errorText }: MagicLinkPollingProps) {
+export default function MagicLinkPolling({
+  email,
+  state,
+  onResendClick,
+  onBackClick,
+  errorText,
+}: MagicLinkPollingProps) {
   const [countdown, setCountdown] = useState(60)
   const [canResend, setCanResend] = useState(false)
   const [isResending, setIsResending] = useState(false)
@@ -26,6 +33,25 @@ export default function MagicLinkPolling({ email, onResendClick, onBackClick, er
       setCanResend(true)
     }
   }, [countdown, canResend])
+
+  // Simple polling effect
+  useEffect(() => {
+    // Don't poll if we don't have the next function or if action is ""
+    if (!state.next) return;
+    if (state.next.action==="") return;
+    
+    // Set up a simple interval to call next('polling', {}) every 3 seconds
+    const pollingInterval = setInterval(() => {
+      if (state.next && state.next.action!=="") {
+        state.next('polling', {});
+      }
+    }, 3000); // Poll every 3 seconds
+    
+    // Clean up on unmount
+    return () => {
+      clearInterval(pollingInterval);
+    };
+  }, [state.next]);
 
   const handleResend = () => {
     if (canResend) {
