@@ -130,20 +130,6 @@
   color: #6366f1;
 }
 
-.input-border {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
-  transition: width 0.3s ease;
-}
-
-.custom-input.focused .input-border {
-  width: 100%;
-}
-
 .custom-input.focused input {
   background-color: #f9fafb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);

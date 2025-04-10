@@ -67,7 +67,6 @@ export default function EmailInput({ onFormUpdate, onClick, onChange, errorText 
               required
             />
             <span className={`floating-label ${email || focused ? "active" : ""}`}>Email Address</span>
-            <span className="input-border"></span>
 
             {email && (
               <span className={`validation-icon ${valid ? "valid" : "invalid"}`}>

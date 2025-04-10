@@ -83,7 +83,6 @@ export default function UserNamePrompt({ email, onSubmit, errorText, state, onFo
               required
             />
             <span className={`floating-label ${name || focused ? "active" : ""}`}>Full Name</span>
-            <span className="input-border"></span>
 
             {name && (
               <span className={`validation-icon ${valid ? "valid" : "invalid"}`}>
