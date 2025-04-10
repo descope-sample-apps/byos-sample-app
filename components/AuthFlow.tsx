@@ -5,17 +5,17 @@ import { Descope } from "@descope/nextjs-sdk"
 import { useSession } from "@descope/nextjs-sdk/client"
 import { useRouter } from "next/navigation"
 import EmailInput from "./EmailInput"
-import MagicLinkPolling from "./MagicLinkPolling"
-import AuthSuccess from "./AuthSuccess"
+import OtpVerification from "./OtpVerification"
+import UserNamePrompt from "./UserNamePrompt"
 
-const passwordScreenName = "Welcome Screen"
-const emailScreenName = "Sign Up Or In"
-const pollingScreenName = "Magic Link Sent"
-const successScreenName = "Verified Successfully"
+const emailScreenName = "Welcome Screen"
+const verifyScreenName = "Verify OTP"
+const nameScreenName = "User Information"
 
 interface FormState {
   email?: string;
   provider?: string;
+  code?: string;
 }
 
 export default function AuthFlow() {
@@ -42,12 +42,12 @@ export default function AuthFlow() {
 
   return (
     <Descope
-      flowId="sign-in-magic-link"
+      flowId="sign-up-or-in-otp"
       onScreenUpdate={(screenName: string, state: { error: {} }, next: any) => {
         console.log("STATE", screenName, state)
         setState((prevState) => ({ ...prevState, ...state, next, screenName }))
 
-        return screenName === passwordScreenName || screenName === emailScreenName || screenName === pollingScreenName || screenName === successScreenName
+        return screenName === emailScreenName || screenName === verifyScreenName || screenName === nameScreenName
       }}
       onSuccess={() => {
         console.log("success")
@@ -63,16 +63,22 @@ export default function AuthFlow() {
               await state.next('sign-up-or-in', form)
             }
           }}
-          onGoogleClick={handleGoogleAuth}
           errorText={state?.error?.text}
           onChange={() => {
             setState(prevState => ({ ...prevState }))
           }}
         />}
-      {state?.screenName === pollingScreenName &&
-        <MagicLinkPolling
+      {state?.screenName === verifyScreenName &&
+        <OtpVerification
           email={form.email || ''}
-          state={state}
+          onFormUpdate={(data) => {
+            setForm(prev => ({ ...prev, ...data }))
+          }}
+          onSubmit={async (data) => {
+            if (state.next) {
+              await state.next('submit-otp', { code: data.form.code })
+            }
+          }}
           onResendClick={async () => {
             if (state.next) {
               await state.next('resend', form)
@@ -84,14 +90,22 @@ export default function AuthFlow() {
             }
           }}
           errorText={state?.error?.text}
-        />}
-
-      {state?.screenName === successScreenName &&
-        <AuthSuccess
-          userName={form.email?.split('@')[0]}
-          onContinue={() => {
-            router.push("/dashboard")
+          onChange={() => {
+            setState(prevState => ({ ...prevState }))
           }}
+          state={state}
+        />}
+      
+      {state?.screenName === nameScreenName &&
+        <UserNamePrompt
+          state={state}
+          onFormUpdate={setForm}
+          onSubmit={async () => {
+            if (state.next) {
+              await state.next('submit-name', form)
+            }
+          }}
+          errorText={state?.error?.text}
         />}
 
     </Descope>

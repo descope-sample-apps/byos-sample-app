@@ -16,19 +16,6 @@ export default function Dashboard() {
       router.push("/")
       return
     }
-
-    if (isAuthenticated && sessionToken) {
-      try {
-        const decodedToken = JSON.parse(atob(sessionToken.split('.')[1]))
-        setUserData({
-          name: decodedToken.name || decodedToken.email || "User",
-          email: decodedToken.email || "",
-          picture: decodedToken.picture || null,
-        })
-      } catch (e) {
-        console.error("Failed to parse user data", e)
-      }
-    }
   }, [isAuthenticated, isSessionLoading, router, sessionToken])
 
   const handleLogout = async () => {
@@ -44,7 +31,7 @@ export default function Dashboard() {
     return <LoadingScreen />
   }
 
-  return <DashboardUI userData={userData || { name: "User", email: "", picture: undefined }} onLogout={handleLogout} />
+  return <DashboardUI onLogout={handleLogout} />
 }
 
 function LoadingScreen() {

@@ -1,4 +1,4 @@
-.magic-link-container {
+.otp-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
   }
   
-  .magic-link-card {
+  .otp-card {
     width: 100%;
     max-width: 420px;
     background: white;
@@ -101,235 +101,37 @@
     word-break: break-all;
   }
   
-  .magic-link-animation {
-    position: relative;
-    height: 120px;
+  .otp-input-group {
+    display: flex;
+    justify-content: space-between;
     margin: 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
   }
   
-  .envelope {
-    position: relative;
-    width: 80px;
-    height: 60px;
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  .envelope-body {
-    position: absolute;
-    bottom: 0;
-    width: 80px;
-    height: 40px;
-    background-color: #6366f1;
-    border-radius: 0 0 4px 4px;
-  }
-  
-  .envelope-top {
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 30px solid #8b5cf6;
-    z-index: 2;
-    transform-origin: top;
-    animation: openClose 4s ease-in-out infinite;
-  }
-  
-  @keyframes openClose {
-    0%,
-    30%,
-    70%,
-    100% {
-      transform: rotateX(0deg);
-    }
-    40%,
-    60% {
-      transform: rotateX(-60deg);
-    }
-  }
-  
-  .letter {
-    position: absolute;
-    top: 10px;
-    left: 15px;
+  .otp-input {
     width: 50px;
-    height: 30px;
-    background-color: white;
-    z-index: 1;
-    animation: letterMove 4s ease-in-out infinite;
-  }
-  
-  @keyframes letterMove {
-    0%,
-    30%,
-    70%,
-    100% {
-      transform: translateY(0);
-    }
-    40%,
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-  
-  .letter-line {
-    position: absolute;
-    width: 70%;
-    height: 2px;
-    background-color: #e5e7eb;
-    left: 15%;
-  }
-  
-  .letter-line:nth-child(1) {
-    top: 8px;
-  }
-  
-  .letter-line:nth-child(2) {
-    top: 14px;
-  }
-  
-  .letter-line:nth-child(3) {
-    top: 20px;
-  }
-  
-  .magic-sparkles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .sparkle {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    border-radius: 50%;
-    opacity: 0;
-  }
-  
-  .sparkle::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: inherit;
-    animation: pulse 2s infinite;
-  }
-  
-  .sparkle-1 {
-    top: 20%;
-    left: 30%;
-    animation: sparkle 4s ease-in-out infinite;
-    animation-delay: 0.5s;
-  }
-  
-  .sparkle-2 {
-    top: 30%;
-    right: 30%;
-    animation: sparkle 4s ease-in-out infinite;
-    animation-delay: 1s;
-  }
-  
-  .sparkle-3 {
-    bottom: 30%;
-    left: 40%;
-    animation: sparkle 4s ease-in-out infinite;
-    animation-delay: 1.5s;
-  }
-  
-  @keyframes sparkle {
-    0%,
-    100% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  /* Verification check animation */
-  .verification-check {
-    position: absolute;
-    width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: scale(0);
-    animation: checkAppear 0.5s cubic-bezier(0.22, 0.68, 0, 1.71) forwards;
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-    z-index: 10;
-  }
-  
-  .verification-check svg {
-    width: 36px;
-    height: 36px;
-    fill: white;
-  }
-  
-  @keyframes checkAppear {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .magic-link-animation.verified .envelope {
-    animation: verifiedFloat 1s forwards;
-  }
-  
-  @keyframes verifiedFloat {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-20px);
-      opacity: 0;
-    }
-  }
-  
-  .instructions {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .instructions p {
-    font-size: 14px;
-    color: #6b7280;
-    margin: 0 0 8px 0;
-  }
-  
-  .success-message {
-    font-size: 16px !important;
-    color: #10b981 !important;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 24px;
     font-weight: 600;
-    margin: 0 0 8px 0;
-    animation: fadeIn 0.5s ease;
+    text-align: center;
+    color: #1f2937;
+    background-color: #f9fafb;
+    transition: all 0.3s;
+    outline: none;
+  }
+  
+  .otp-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    background-color: white;
+  }
+  
+  .otp-input::-webkit-inner-spin-button,
+  .otp-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
   
   .error-message {
@@ -351,13 +153,7 @@
     }
   }
   
-  .action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .resend-button {
+  .submit-button {
     width: 100%;
     height: 56px;
     border: none;
@@ -374,21 +170,33 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    margin-bottom: 20px;
   }
   
-  .resend-button.active:hover {
+  .submit-button:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
   }
   
-  .resend-button.disabled {
+  .submit-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  }
+  
+  .submit-button.disabled {
     background: linear-gradient(135deg, #a5a6f6 0%, #c4b5f8 100%);
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
   }
   
-  .resend-button.resending .button-text {
+  .button-text {
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .submit-button.submitting .button-text {
     opacity: 0;
   }
   
@@ -404,7 +212,7 @@
     transition: opacity 0.3s;
   }
   
-  .resend-button.resending .loading-spinner {
+  .submit-button.submitting .loading-spinner {
     opacity: 1;
   }
   
@@ -414,37 +222,49 @@
     }
   }
   
-  .back-button {
+  .action-links {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    background-color: white;
-    font-size: 15px;
-    font-weight: 500;
-    color: #4b5563;
+    gap: 15px;
+  }
+  
+  .resend-link,
+  .back-link {
+    background: none;
+    border: none;
+    font-size: 14px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: color 0.2s;
+    padding: 0;
   }
   
-  .back-button:hover:not(:disabled) {
-    background-color: #f9fafb;
-    border-color: #d1d5db;
+  .resend-link.active {
     color: #6366f1;
+    font-weight: 500;
   }
   
-  .back-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  .resend-link.active:hover {
+    text-decoration: underline;
   }
   
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    fill: currentColor;
+  .resend-link.disabled {
+    color: #9ca3af;
+    cursor: default;
+  }
+  
+  .resend-link.resending {
+    color: #9ca3af;
+    cursor: wait;
+  }
+  
+  .back-link {
+    color: #6b7280;
+  }
+  
+  .back-link:hover {
+    color: #4b5563;
+    text-decoration: underline;
   }
   
   .background-shapes {
@@ -509,7 +329,7 @@
   }
   
   @media (max-width: 480px) {
-    .magic-link-card {
+    .otp-card {
       padding: 30px 20px;
       border-radius: 12px;
     }
@@ -530,6 +350,12 @@
   
     .card-header p {
       font-size: 14px;
+    }
+  
+    .otp-input {
+      width: 40px;
+      height: 50px;
+      font-size: 20px;
     }
   }
   

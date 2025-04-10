@@ -847,3 +847,52 @@
     }
   }
   
+  .welcome-section.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
+    padding: 2rem;
+  }
+  
+  .large-greeting {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1a1a1a;
+    line-height: 1.2;
+  }
+  
+  .date-text {
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  .logout-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 8px;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .logout-button:hover {
+    background: #e5e7eb;
+  }
+  
+  .logout-button svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+  

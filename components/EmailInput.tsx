@@ -6,11 +6,10 @@ interface EmailInputProps {
   onFormUpdate: (data: Record<string, string>) => void;
   onClick: () => void;
   onChange: () => void;
-  onGoogleClick?: () => void;
   errorText?: string;
 }
 
-export default function EmailInput({ onFormUpdate, onClick, onChange, onGoogleClick, errorText }: EmailInputProps) {
+export default function EmailInput({ onFormUpdate, onClick, onChange, errorText }: EmailInputProps) {
   const [email, setEmail] = useState("")
   const [focused, setFocused] = useState(false)
   const [valid, setValid] = useState(true)
@@ -32,19 +31,13 @@ export default function EmailInput({ onFormUpdate, onClick, onChange, onGoogleCl
     onChange()
   }
 
-  const handleEmailSubmit = () => {
+  const handleSubmit = () => {
     if (email && valid) {
       setAnimating(true)
       setTimeout(() => {
         onClick()
       }, 600)
     }
-  }
-
-  const handleGoogleSubmit = () => {
-    setEmail("")
-    onFormUpdate({ provider: "google" })
-    onGoogleClick?.()
   }
 
   return (
@@ -98,7 +91,7 @@ export default function EmailInput({ onFormUpdate, onClick, onChange, onGoogleCl
         <button
           className={`sign-in-button ${animating ? "animating" : ""} ${!valid || !email ? "disabled" : ""}`}
           type="button"
-          onClick={handleEmailSubmit}
+          onClick={handleSubmit}
           disabled={!valid || !email || animating}
         >
           <span className="button-text">Continue</span>
@@ -109,23 +102,6 @@ export default function EmailInput({ onFormUpdate, onClick, onChange, onGoogleCl
           </span>
           <span className="loading-spinner"></span>
         </button>
-
-        <div className="alternative-options">
-          <span className="divider">
-            <span className="divider-line"></span>
-            <span className="divider-text">or</span>
-            <span className="divider-line"></span>
-          </span>
-
-          <div className="social-buttons">
-            <button className="social-button google" onClick={handleGoogleSubmit}>
-              <svg viewBox="0 0 24 24">
-                <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z" />
-              </svg>
-              <span>Continue with Google</span>
-            </button>
-          </div>
-        </div>
       </div>
 
       <div className="background-shapes">
