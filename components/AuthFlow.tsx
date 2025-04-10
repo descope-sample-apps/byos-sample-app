@@ -31,15 +31,6 @@ export default function AuthFlow() {
     }
   }, [isAuthenticated, router])
 
-  const handleGoogleAuth = async () => {
-    if (state.next) {
-      const googleData = { provider: 'google' };
-      setForm({ provider: 'google' });
-      // Call next with the Google data
-      await state.next('google', googleData);
-    }
-  };
-
   return (
     <Descope
       flowId="sign-up-or-in-otp"
