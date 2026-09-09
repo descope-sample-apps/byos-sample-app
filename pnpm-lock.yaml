@@ -141,8 +141,8 @@ importers:
         specifier: ^2.1.7
         version: 2.1.9(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       recharts:
-        specifier: 2.15.0
-        version: 2.15.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        specifier: 2.15.4
+        version: 2.15.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       sonner:
         specifier: ^1.7.1
         version: 1.7.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -199,9 +199,6 @@ packages:
 
   '@descope/audit-management-widget@0.9.2':
     resolution: {integrity: sha512-YunFz8GHEJLFTTChTtW1StsbygP2jLGbdKlvQbFoPqrcUY7gW/2wSofl6t+NVjTXoRmDzVv0VnaaJJ2CG3xByQ==}
-
-  '@descope/core-js-sdk@2.67.0':
-    resolution: {integrity: sha512-KOnmnhdePQ4JGNdy3sXH+YXWdo7bAbAjyg9NdkViS0E14MrOZDAXDPv6zP7T3akD2e6Q4KWOaG7dNurP8bCWiA==}
 
   '@descope/core-js-sdk@2.70.1':
     resolution: {integrity: sha512-CmgeRzxzkeVNbTeEqkBhHcxNFNXjRfe77yMbP9lvqV3XnmAkb2yq8aVMBQ/JGfyi4Ty//4i4pPFkVHaboB4r8w==}
@@ -264,9 +261,6 @@ packages:
 
   '@descope/web-component@4.3.2':
     resolution: {integrity: sha512-fK1fjBd1jj93KXEqimrVjaziHmPZQnz5cY/Xs5Z5O5a/e2idTSd9bJrmCquvt6iY9mwRhqciL0rnN4Ep51gXiw==}
-
-  '@descope/web-js-sdk@1.51.3':
-    resolution: {integrity: sha512-LUgwqwsFKfojyOtDDg6pg+++mIorubdHhLfzxeVH5NEFMeGmD0jDwy1xQLEGoe/b1ufEADDK7bdmYWv/cAHZmQ==}
 
   '@descope/web-js-sdk@1.52.1':
     resolution: {integrity: sha512-ToD37HHv324CJzEnZ3w/C83XZYQFi7v1nmMkgT9LjXLcGI68ezsxO7zyM3gECb32B95gI2WG+rgGg9uVuiXNHg==}
@@ -1786,8 +1780,8 @@ packages:
   recharts-scale@0.4.5:
     resolution: {integrity: sha512-kivNFO+0OcUNu7jQquLXAxz1FIwZj8nrj+YkOKc5694NbjCvcT6aSZiIzNzd2Kul4o4rTto8QVR9lMNtxD4G1w==}
 
-  recharts@2.15.0:
-    resolution: {integrity: sha512-cIvMxDfpAmqAmVgc4yb7pgm/O1tmmkl/CjrvXuW+62/+7jj/iF9Ykm+hb/UJt42TREHMyd3gb+pkgoa2MxgDIw==}
+  recharts@2.15.4:
+    resolution: {integrity: sha512-UT/q6fwS3c1dHbXv2uFgYJ9BMFHu3fwnd7AYZaEQhXuYQ4hgsxLvsUXzGdKeZrW5xopzDCvuA2N41WJ88I7zIw==}
     engines: {node: '>=14'}
     deprecated: 1.x and 2.x branches are no longer active. Bump to Recharts v3 to receive latest features and bugfixes. See https://github.com/recharts/recharts/wiki/3.0-migration-guide
     peerDependencies:
@@ -2022,11 +2016,6 @@ snapshots:
       - react
       - react-redux
 
-  '@descope/core-js-sdk@2.67.0':
-    dependencies:
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-
   '@descope/core-js-sdk@2.70.1':
     dependencies:
       jwt-decode: 4.0.0
@@ -2044,7 +2033,7 @@ snapshots:
       next: 16.3.3(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
-      '@descope/web-js-sdk': 1.51.3
+      '@descope/web-js-sdk': 1.52.1
     transitivePeerDependencies:
       - '@reduxjs/toolkit'
       - encoding
@@ -2056,7 +2045,7 @@ snapshots:
 
   '@descope/node-sdk@2.8.0':
     dependencies:
-      '@descope/core-js-sdk': 2.67.0
+      '@descope/core-js-sdk': 2.70.1
       cross-fetch: 4.1.0
       jose: 5.2.2
       tslib: 2.8.1
@@ -2212,15 +2201,6 @@ snapshots:
       - immer
       - redux
       - redux-thunk
-
-  '@descope/web-js-sdk@1.51.3':
-    dependencies:
-      '@descope/core-js-sdk': 2.67.0
-      '@fingerprintjs/fingerprintjs-pro': 3.11.6
-      js-cookie: 3.0.8
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-    optional: true
 
   '@descope/web-js-sdk@1.52.1':
     dependencies:
@@ -3629,7 +3609,7 @@ snapshots:
     dependencies:
       decimal.js-light: 2.5.1
 
-  recharts@2.15.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  recharts@2.15.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
       clsx: 2.1.1
       eventemitter3: 4.0.7
