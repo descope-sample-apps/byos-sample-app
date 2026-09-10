@@ -138,8 +138,8 @@ importers:
         specifier: ^7.54.1
         version: 7.68.0(react@19.2.1)
       react-resizable-panels:
-        specifier: ^2.1.7
-        version: 2.1.9(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        specifier: ^4.0.0
+        version: 4.12.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       recharts:
         specifier: 2.15.0
         version: 2.15.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -199,9 +199,6 @@ packages:
 
   '@descope/audit-management-widget@0.9.2':
     resolution: {integrity: sha512-YunFz8GHEJLFTTChTtW1StsbygP2jLGbdKlvQbFoPqrcUY7gW/2wSofl6t+NVjTXoRmDzVv0VnaaJJ2CG3xByQ==}
-
-  '@descope/core-js-sdk@2.67.0':
-    resolution: {integrity: sha512-KOnmnhdePQ4JGNdy3sXH+YXWdo7bAbAjyg9NdkViS0E14MrOZDAXDPv6zP7T3akD2e6Q4KWOaG7dNurP8bCWiA==}
 
   '@descope/core-js-sdk@2.70.1':
     resolution: {integrity: sha512-CmgeRzxzkeVNbTeEqkBhHcxNFNXjRfe77yMbP9lvqV3XnmAkb2yq8aVMBQ/JGfyi4Ty//4i4pPFkVHaboB4r8w==}
@@ -264,9 +261,6 @@ packages:
 
   '@descope/web-component@4.3.2':
     resolution: {integrity: sha512-fK1fjBd1jj93KXEqimrVjaziHmPZQnz5cY/Xs5Z5O5a/e2idTSd9bJrmCquvt6iY9mwRhqciL0rnN4Ep51gXiw==}
-
-  '@descope/web-js-sdk@1.51.3':
-    resolution: {integrity: sha512-LUgwqwsFKfojyOtDDg6pg+++mIorubdHhLfzxeVH5NEFMeGmD0jDwy1xQLEGoe/b1ufEADDK7bdmYWv/cAHZmQ==}
 
   '@descope/web-js-sdk@1.52.1':
     resolution: {integrity: sha512-ToD37HHv324CJzEnZ3w/C83XZYQFi7v1nmMkgT9LjXLcGI68ezsxO7zyM3gECb32B95gI2WG+rgGg9uVuiXNHg==}
@@ -1744,11 +1738,11 @@ packages:
       '@types/react':
         optional: true
 
-  react-resizable-panels@2.1.9:
-    resolution: {integrity: sha512-z77+X08YDIrgAes4jl8xhnUu1LNIRp4+E7cv4xHmLOxxUPO/ML7PSrE813b90vj7xvQ1lcf7g2uA9GeMZonjhQ==}
+  react-resizable-panels@4.12.4:
+    resolution: {integrity: sha512-SOsSj4e9U7vxL15MbgTfl35IO4vxSW4Xb0b1gtJVbRPWv7FOezcgOA00Mi0jP8XqC3y7jOQxpsGs/9zLKHPitA==}
     peerDependencies:
-      react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
-      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   react-smooth@4.0.4:
     resolution: {integrity: sha512-gnGKTpYwqL0Iii09gHobNolvX4Kiq4PKx6eWBCYYix+8cdw+cGo3do906l1NBPKkSWx1DghC1dlWG9L2uGd61Q==}
@@ -2022,11 +2016,6 @@ snapshots:
       - react
       - react-redux
 
-  '@descope/core-js-sdk@2.67.0':
-    dependencies:
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-
   '@descope/core-js-sdk@2.70.1':
     dependencies:
       jwt-decode: 4.0.0
@@ -2044,7 +2033,7 @@ snapshots:
       next: 16.3.3(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
-      '@descope/web-js-sdk': 1.51.3
+      '@descope/web-js-sdk': 1.52.1
     transitivePeerDependencies:
       - '@reduxjs/toolkit'
       - encoding
@@ -2056,7 +2045,7 @@ snapshots:
 
   '@descope/node-sdk@2.8.0':
     dependencies:
-      '@descope/core-js-sdk': 2.67.0
+      '@descope/core-js-sdk': 2.70.1
       cross-fetch: 4.1.0
       jose: 5.2.2
       tslib: 2.8.1
@@ -2212,15 +2201,6 @@ snapshots:
       - immer
       - redux
       - redux-thunk
-
-  '@descope/web-js-sdk@1.51.3':
-    dependencies:
-      '@descope/core-js-sdk': 2.67.0
-      '@fingerprintjs/fingerprintjs-pro': 3.11.6
-      js-cookie: 3.0.8
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-    optional: true
 
   '@descope/web-js-sdk@1.52.1':
     dependencies:
@@ -3585,7 +3565,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.7
 
-  react-resizable-panels@2.1.9(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  react-resizable-panels@4.12.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
