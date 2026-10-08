@@ -129,8 +129,8 @@ importers:
         specifier: ^19
         version: 19.2.1
       react-day-picker:
-        specifier: 9.11.3
-        version: 9.11.3(react@19.2.1)
+        specifier: 9.14.0
+        version: 9.14.0(react@19.2.1)
       react-dom:
         specifier: ^19
         version: 19.2.1(react@19.2.1)
@@ -200,9 +200,6 @@ packages:
   '@descope/audit-management-widget@0.9.9':
     resolution: {integrity: sha512-fpjQD7W72KfBGUBN89e2FhOlZg4YVeP4gMn8BqkmRAUNpuEYq9wOf+u3QhhmQH9tSS7fQOPgbvqrYnlPPLSMQQ==}
 
-  '@descope/core-js-sdk@2.74.0':
-    resolution: {integrity: sha512-L1G8ZiLMAsFmfTOxWvcLdarHlDFZOgENx+o1lRrfl3yPyKqc23jZ4Dt76UVQ0rIzh3C4wfvaGk7lm66Oh+Lfuw==}
-
   '@descope/core-js-sdk@2.75.0':
     resolution: {integrity: sha512-DjAOE+egtuOKqJIqf06+bQunlibJoEUNCqr6osiNWJCYIoMv2nZYIlQVnM8xw0oqu7qVEz3bHLQDx2NREFOWYw==}
 
@@ -261,9 +258,6 @@ packages:
 
   '@descope/web-component@4.4.8':
     resolution: {integrity: sha512-vm5YknAQgkhZ5WZ4ng+8uJEePorC/WNtc/0NRsJ+EvXxwk4cKqAw9+J2oge1ztLSzAO1ZSACSZCbZzb1h0V2Kg==}
-
-  '@descope/web-js-sdk@1.54.0':
-    resolution: {integrity: sha512-gGGTIoT6voj4qJkqsVObY1DPyldxnsHRXpZWMu6DWjXBqwc7hNFvs1Uq9g9BG/O0v1KbhT61nHMuA9/yD4Hf4A==}
 
   '@descope/web-js-sdk@1.54.1':
     resolution: {integrity: sha512-Mn8m2amXSnNl0PuujRmqgZdWTtGFe0M+VazlbRK39Tr/oFeZvpv7TxU7Gu7civMngrw1Y4N8jup6V7fHZhkJHg==}
@@ -1212,6 +1206,10 @@ packages:
   '@swc/helpers@0.5.23':
     resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
 
+  '@tabby_ai/hijri-converter@1.0.5':
+    resolution: {integrity: sha512-r5bClKrcIusDoo049dSL8CawnHR6mRdDwhlQuIgZRNty68q0x8k3Lf1BtPAMxRf/GgnHBnIO4ujd3+GQdLWzxQ==}
+    engines: {node: '>=16.0.0'}
+
   '@types/d3-array@3.2.2':
     resolution: {integrity: sha512-hOLWVbm7uRza0BYXpIIW5pxfrKe0W+D5lrFiAEYR+pb6w3N2SwSMaJbXdUfSEv+dT4MfHBLtn5js0LAWaO6otw==}
 
@@ -1698,8 +1696,8 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  react-day-picker@9.11.3:
-    resolution: {integrity: sha512-7lD12UvGbkyXqgzbYIGQTbl+x29B9bAf+k0pP5Dcs1evfpKk6zv4EdH/edNc8NxcmCiTNXr2HIYPrSZ3XvmVBg==}
+  react-day-picker@9.14.0:
+    resolution: {integrity: sha512-tBaoDWjPwe0M5pGrum4H0SR6Lyk+BO9oHnp9JbKpGKW2mlraNPgP9BMfsg5pWpwrssARmeqk7YBl2oXutZTaHA==}
     engines: {node: '>=18'}
     peerDependencies:
       react: '>=16.8.0'
@@ -2019,11 +2017,6 @@ snapshots:
       - react
       - react-redux
 
-  '@descope/core-js-sdk@2.74.0':
-    dependencies:
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-
   '@descope/core-js-sdk@2.75.0':
     dependencies:
       jwt-decode: 4.0.0
@@ -2041,7 +2034,7 @@ snapshots:
       next: 16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
-      '@descope/web-js-sdk': 1.54.0
+      '@descope/web-js-sdk': 1.54.1
     transitivePeerDependencies:
       - '@reduxjs/toolkit'
       - encoding
@@ -2053,7 +2046,7 @@ snapshots:
 
   '@descope/node-sdk@2.8.0':
     dependencies:
-      '@descope/core-js-sdk': 2.74.0
+      '@descope/core-js-sdk': 2.75.0
       cross-fetch: 4.1.0
       jose: 5.2.2
       tslib: 2.8.1
@@ -2204,15 +2197,6 @@ snapshots:
       - immer
       - redux
       - redux-thunk
-
-  '@descope/web-js-sdk@1.54.0':
-    dependencies:
-      '@descope/core-js-sdk': 2.74.0
-      '@fingerprintjs/fingerprintjs-pro': 3.11.6
-      js-cookie: 3.0.8
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-    optional: true
 
   '@descope/web-js-sdk@1.54.1':
     dependencies:
@@ -3125,6 +3109,8 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  '@tabby_ai/hijri-converter@1.0.5': {}
+
   '@types/d3-array@3.2.2': {}
 
   '@types/d3-color@3.1.3': {}
@@ -3538,9 +3524,10 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-day-picker@9.11.3(react@19.2.1):
+  react-day-picker@9.14.0(react@19.2.1):
     dependencies:
       '@date-fns/tz': 1.4.1
+      '@tabby_ai/hijri-converter': 1.0.5
       date-fns: 4.1.0
       date-fns-jalali: 4.1.0-0
       react: 19.2.1
