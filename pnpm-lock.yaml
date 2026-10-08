@@ -105,8 +105,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       cmdk:
-        specifier: 1.0.4
-        version: 1.0.4(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        specifier: 1.1.1
+        version: 1.1.1(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       date-fns:
         specifier: ^3
         version: 3.6.0
@@ -200,9 +200,6 @@ packages:
   '@descope/audit-management-widget@0.9.9':
     resolution: {integrity: sha512-fpjQD7W72KfBGUBN89e2FhOlZg4YVeP4gMn8BqkmRAUNpuEYq9wOf+u3QhhmQH9tSS7fQOPgbvqrYnlPPLSMQQ==}
 
-  '@descope/core-js-sdk@2.74.0':
-    resolution: {integrity: sha512-L1G8ZiLMAsFmfTOxWvcLdarHlDFZOgENx+o1lRrfl3yPyKqc23jZ4Dt76UVQ0rIzh3C4wfvaGk7lm66Oh+Lfuw==}
-
   '@descope/core-js-sdk@2.75.0':
     resolution: {integrity: sha512-DjAOE+egtuOKqJIqf06+bQunlibJoEUNCqr6osiNWJCYIoMv2nZYIlQVnM8xw0oqu7qVEz3bHLQDx2NREFOWYw==}
 
@@ -261,9 +258,6 @@ packages:
 
   '@descope/web-component@4.4.8':
     resolution: {integrity: sha512-vm5YknAQgkhZ5WZ4ng+8uJEePorC/WNtc/0NRsJ+EvXxwk4cKqAw9+J2oge1ztLSzAO1ZSACSZCbZzb1h0V2Kg==}
-
-  '@descope/web-js-sdk@1.54.0':
-    resolution: {integrity: sha512-gGGTIoT6voj4qJkqsVObY1DPyldxnsHRXpZWMu6DWjXBqwc7hNFvs1Uq9g9BG/O0v1KbhT61nHMuA9/yD4Hf4A==}
 
   '@descope/web-js-sdk@1.54.1':
     resolution: {integrity: sha512-Mn8m2amXSnNl0PuujRmqgZdWTtGFe0M+VazlbRK39Tr/oFeZvpv7TxU7Gu7civMngrw1Y4N8jup6V7fHZhkJHg==}
@@ -1310,8 +1304,8 @@ packages:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
 
-  cmdk@1.0.4:
-    resolution: {integrity: sha512-AnsjfHyHpQ/EFeAnG216WY7A5LiYCoZzCSygiLvfXC3H3LFGCprErteUcszaVluGOhuOTbJS3jWHrSDYPBBygg==}
+  cmdk@1.1.1:
+    resolution: {integrity: sha512-Vsv7kFaXm+ptHDMZ7izaRsP70GgrW9NBNGswt9OZaVBLlE0SNpDq8eu/VGXyF9r7M0azK3Wy7OlYXsuyYLFzHg==}
     peerDependencies:
       react: ^18 || ^19 || ^19.0.0-rc
       react-dom: ^18 || ^19 || ^19.0.0-rc
@@ -2019,11 +2013,6 @@ snapshots:
       - react
       - react-redux
 
-  '@descope/core-js-sdk@2.74.0':
-    dependencies:
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-
   '@descope/core-js-sdk@2.75.0':
     dependencies:
       jwt-decode: 4.0.0
@@ -2041,7 +2030,7 @@ snapshots:
       next: 16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
-      '@descope/web-js-sdk': 1.54.0
+      '@descope/web-js-sdk': 1.54.1
     transitivePeerDependencies:
       - '@reduxjs/toolkit'
       - encoding
@@ -2053,7 +2042,7 @@ snapshots:
 
   '@descope/node-sdk@2.8.0':
     dependencies:
-      '@descope/core-js-sdk': 2.74.0
+      '@descope/core-js-sdk': 2.75.0
       cross-fetch: 4.1.0
       jose: 5.2.2
       tslib: 2.8.1
@@ -2204,15 +2193,6 @@ snapshots:
       - immer
       - redux
       - redux-thunk
-
-  '@descope/web-js-sdk@1.54.0':
-    dependencies:
-      '@descope/core-js-sdk': 2.74.0
-      '@fingerprintjs/fingerprintjs-pro': 3.11.6
-      js-cookie: 3.0.8
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-    optional: true
 
   '@descope/web-js-sdk@1.54.1':
     dependencies:
@@ -3224,14 +3204,14 @@ snapshots:
 
   clsx@2.1.1: {}
 
-  cmdk@1.0.4(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  cmdk@1.1.1(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
+      '@radix-ui/react-compose-refs': 1.1.2(@types/react@19.2.7)(react@19.2.1)
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@radix-ui/react-id': 1.1.1(@types/react@19.2.7)(react@19.2.1)
       '@radix-ui/react-primitive': 2.1.4(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
-      use-sync-external-store: 1.6.0(react@19.2.1)
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
