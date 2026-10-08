@@ -144,8 +144,8 @@ importers:
         specifier: 2.15.0
         version: 2.15.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       sonner:
-        specifier: ^1.7.1
-        version: 1.7.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        specifier: ^2.0.0
+        version: 2.0.8(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       tailwind-merge:
         specifier: ^2.5.5
         version: 2.6.0
@@ -199,9 +199,6 @@ packages:
 
   '@descope/audit-management-widget@0.9.9':
     resolution: {integrity: sha512-fpjQD7W72KfBGUBN89e2FhOlZg4YVeP4gMn8BqkmRAUNpuEYq9wOf+u3QhhmQH9tSS7fQOPgbvqrYnlPPLSMQQ==}
-
-  '@descope/core-js-sdk@2.74.0':
-    resolution: {integrity: sha512-L1G8ZiLMAsFmfTOxWvcLdarHlDFZOgENx+o1lRrfl3yPyKqc23jZ4Dt76UVQ0rIzh3C4wfvaGk7lm66Oh+Lfuw==}
 
   '@descope/core-js-sdk@2.75.0':
     resolution: {integrity: sha512-DjAOE+egtuOKqJIqf06+bQunlibJoEUNCqr6osiNWJCYIoMv2nZYIlQVnM8xw0oqu7qVEz3bHLQDx2NREFOWYw==}
@@ -261,9 +258,6 @@ packages:
 
   '@descope/web-component@4.4.8':
     resolution: {integrity: sha512-vm5YknAQgkhZ5WZ4ng+8uJEePorC/WNtc/0NRsJ+EvXxwk4cKqAw9+J2oge1ztLSzAO1ZSACSZCbZzb1h0V2Kg==}
-
-  '@descope/web-js-sdk@1.54.0':
-    resolution: {integrity: sha512-gGGTIoT6voj4qJkqsVObY1DPyldxnsHRXpZWMu6DWjXBqwc7hNFvs1Uq9g9BG/O0v1KbhT61nHMuA9/yD4Hf4A==}
 
   '@descope/web-js-sdk@1.54.1':
     resolution: {integrity: sha512-Mn8m2amXSnNl0PuujRmqgZdWTtGFe0M+VazlbRK39Tr/oFeZvpv7TxU7Gu7civMngrw1Y4N8jup6V7fHZhkJHg==}
@@ -1831,11 +1825,15 @@ packages:
       '@types/node':
         optional: true
 
-  sonner@1.7.4:
-    resolution: {integrity: sha512-DIS8z4PfJRbIyfVFDVnK9rO3eYDtse4Omcm6bt0oEr5/jtLgysmjuBl1frJ9E/EQZrFmKx2A8m/s5s9CRXIzhw==}
+  sonner@2.0.8:
+    resolution: {integrity: sha512-UM/ByIoFra8yzV75n1o0Puu0bw5U/9UNnDacrJNspekBewIfsQ3D6ez1nvlWpt7aTsO6rujQtifBpycwIivqlg==}
     peerDependencies:
+      '@types/react': ^18.0.0 || ^19.0.0
       react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
       react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -2019,11 +2017,6 @@ snapshots:
       - react
       - react-redux
 
-  '@descope/core-js-sdk@2.74.0':
-    dependencies:
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-
   '@descope/core-js-sdk@2.75.0':
     dependencies:
       jwt-decode: 4.0.0
@@ -2041,7 +2034,7 @@ snapshots:
       next: 16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
-      '@descope/web-js-sdk': 1.54.0
+      '@descope/web-js-sdk': 1.54.1
     transitivePeerDependencies:
       - '@reduxjs/toolkit'
       - encoding
@@ -2053,7 +2046,7 @@ snapshots:
 
   '@descope/node-sdk@2.8.0':
     dependencies:
-      '@descope/core-js-sdk': 2.74.0
+      '@descope/core-js-sdk': 2.75.0
       cross-fetch: 4.1.0
       jose: 5.2.2
       tslib: 2.8.1
@@ -2204,15 +2197,6 @@ snapshots:
       - immer
       - redux
       - redux-thunk
-
-  '@descope/web-js-sdk@1.54.0':
-    dependencies:
-      '@descope/core-js-sdk': 2.74.0
-      '@fingerprintjs/fingerprintjs-pro': 3.11.6
-      js-cookie: 3.0.8
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-    optional: true
 
   '@descope/web-js-sdk@1.54.1':
     dependencies:
@@ -3693,10 +3677,12 @@ snapshots:
       '@types/node': 22.19.1
     optional: true
 
-  sonner@1.7.4(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  sonner@2.0.8(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
+    optionalDependencies:
+      '@types/react': 19.2.7
 
   source-map-js@1.2.1: {}
 
