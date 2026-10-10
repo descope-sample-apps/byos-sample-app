@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@descope/nextjs-sdk':
         specifier: latest
-        version: 0.16.12(@reduxjs/toolkit@2.11.2(react@19.2.1))(@types/react@19.2.7)(immer@10.2.0)(next@16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(redux-thunk@3.1.0(redux@5.0.1))(redux@5.0.1)
+        version: 0.16.12(@reduxjs/toolkit@2.11.2(react@19.2.1))(@types/react@19.2.7)(immer@10.2.0)(next@16.4.0(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(redux-thunk@3.1.0(redux@5.0.1))(redux@5.0.1)
       '@hookform/resolvers':
         specifier: ^3.9.1
         version: 3.10.0(react-hook-form@7.68.0(react@19.2.1))
@@ -120,8 +120,8 @@ importers:
         specifier: ^0.454.0
         version: 0.454.0(react@19.2.1)
       next:
-        specifier: 16.3.8
-        version: 16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        specifier: 16.4.0
+        version: 16.4.0(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.4
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -200,9 +200,6 @@ packages:
   '@descope/audit-management-widget@0.9.9':
     resolution: {integrity: sha512-fpjQD7W72KfBGUBN89e2FhOlZg4YVeP4gMn8BqkmRAUNpuEYq9wOf+u3QhhmQH9tSS7fQOPgbvqrYnlPPLSMQQ==}
 
-  '@descope/core-js-sdk@2.74.0':
-    resolution: {integrity: sha512-L1G8ZiLMAsFmfTOxWvcLdarHlDFZOgENx+o1lRrfl3yPyKqc23jZ4Dt76UVQ0rIzh3C4wfvaGk7lm66Oh+Lfuw==}
-
   '@descope/core-js-sdk@2.75.0':
     resolution: {integrity: sha512-DjAOE+egtuOKqJIqf06+bQunlibJoEUNCqr6osiNWJCYIoMv2nZYIlQVnM8xw0oqu7qVEz3bHLQDx2NREFOWYw==}
 
@@ -261,9 +258,6 @@ packages:
 
   '@descope/web-component@4.4.8':
     resolution: {integrity: sha512-vm5YknAQgkhZ5WZ4ng+8uJEePorC/WNtc/0NRsJ+EvXxwk4cKqAw9+J2oge1ztLSzAO1ZSACSZCbZzb1h0V2Kg==}
-
-  '@descope/web-js-sdk@1.54.0':
-    resolution: {integrity: sha512-gGGTIoT6voj4qJkqsVObY1DPyldxnsHRXpZWMu6DWjXBqwc7hNFvs1Uq9g9BG/O0v1KbhT61nHMuA9/yD4Hf4A==}
 
   '@descope/web-js-sdk@1.54.1':
     resolution: {integrity: sha512-Mn8m2amXSnNl0PuujRmqgZdWTtGFe0M+VazlbRK39Tr/oFeZvpv7TxU7Gu7civMngrw1Y4N8jup6V7fHZhkJHg==}
@@ -469,57 +463,57 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@next/env@16.3.8':
-    resolution: {integrity: sha512-Al9zqHVV7TJv0eFuOU4U7Lvv74PTih4Ch63sk2xCIpSTkE3udFnaOcnzP2lQVymiL7yS9Cj2iClUXlR3EQ5sEw==}
+  '@next/env@16.4.0':
+    resolution: {integrity: sha512-pyLlT5oafGlX8X7xjgGNXz5dNIDSxREm+qD6i9VLSZiZFopA/XWl8NM/KPmLx/8EG/++c49iid3gNWSQW1+2dQ==}
 
-  '@next/swc-darwin-arm64@16.3.8':
-    resolution: {integrity: sha512-2JPRMh2nmQG5CiL7cXGL9AGwnPWJQ//cTtAUCT+w511QHk79SYz3LGv/pc5X643B/WEO0rvu3Yww0hqwt3kgeA==}
+  '@next/swc-darwin-arm64@16.4.0':
+    resolution: {integrity: sha512-yyZ+9MgViAKLLb5l1gPBGjRwnq3teNLb5Zx6JEw8LzNSTjlsnp+baUHFxTgl7PpjCmKf48VQfyipG1eBflb48Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@16.3.8':
-    resolution: {integrity: sha512-GZtCCOBKJ4leVIT/Th0llWKhD1ca92lzbQiS5R5ON9QkoiFnilFsebDae1JU2a3HWoKMEmEZWGs1AGLavVM72Q==}
+  '@next/swc-darwin-x64@16.4.0':
+    resolution: {integrity: sha512-RePEEejEj1Auf5s9qEcG0JbcDP3ceNUS/ofNX8AhxzgIjTVlZIHMatlp16YplcSMpsVo/ZMQHJTjbMYJznjGUg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@16.3.8':
-    resolution: {integrity: sha512-O659ygeQYqneJ1fBKMpFxIFqYkYswu8IAS1OCKK/4f3ZgJJm1dRz4fVJZRi/kLLWjnBKnebOePA4WNv+sV1pVA==}
+  '@next/swc-linux-arm64-gnu@16.4.0':
+    resolution: {integrity: sha512-HhsyCqd+NpmvDDVY/LqkAN24f+QVvXh3ie+PfcwKinWL2Mu826JymQxJXGjAIfmJ4VlHjp4Pe/nZtXtUoEMAqw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@next/swc-linux-arm64-musl@16.3.8':
-    resolution: {integrity: sha512-dSjKSyWpzxoO1d3DIZZcP4XJcNaKeLmxQMFOiYl5vuBRMmweIqnAhty8tAmRsvTss779cK1FtYnDMj40e4TQlg==}
+  '@next/swc-linux-arm64-musl@16.4.0':
+    resolution: {integrity: sha512-sN9Pf+Zh+RpZAOmbR7d8KAA8T61CVhawtbEJ2Bk6QrRzx6Z/6haaF4UiwBzytM96GRRRWZh9/WALIEO3npMamA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@next/swc-linux-x64-gnu@16.3.8':
-    resolution: {integrity: sha512-lbqOuz3RPRcv+o9msNsJw5x4+Y1ZwPTs6vmL6DCf7i0fZfvng/F59wyeDwqHIvV0mK//RBy/jJkZ+nCKsSMXjQ==}
+  '@next/swc-linux-x64-gnu@16.4.0':
+    resolution: {integrity: sha512-D5M5xLWQVd1CvR+L7BickM1weRfmM41x3L1NWcnKY/oyJJqr1qwaCgmu3dMAhLBOMdZwSuDCRV6DJRRpiUkbDQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@next/swc-linux-x64-musl@16.3.8':
-    resolution: {integrity: sha512-+316WswI8ScVgZeUd+1KGaXkHhaYQzCjvH/05TZSpJ8zBizb1a4G7DtO7F12jcBIqMOtsz9ji1t48fmKtzqsGA==}
+  '@next/swc-linux-x64-musl@16.4.0':
+    resolution: {integrity: sha512-8d5WLS6a9YalqpOgXdlbvonFu+sIgjA+CO6tGzetrpPVcUL56foa7B7664h41rAlbLi5fJwK4vWji3zf4QDy+w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@next/swc-win32-arm64-msvc@16.3.8':
-    resolution: {integrity: sha512-ji0gd4kMYUxO+1fJBIbiBVRCjzG/lloiyCccnlebvb1ZJ5qXCPZqYg4Jl1DrrixnWNMKylzgpmMWx0yNDYXlzw==}
+  '@next/swc-win32-arm64-msvc@16.4.0':
+    resolution: {integrity: sha512-sQuOIiW3snb48UwrBcDMvFA/u03qtw2LeuSIxFIQ9AJuW9UG/4Ddsfo+eV73PnZwBhyncMtsKVh7PrzMol2/fA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@16.3.8':
-    resolution: {integrity: sha512-WcTlaKt/TWkh5kUjdJcUmB1XgZ+1c6fz4Y9fDHL73YNSdGaUWjceeWrrlwF0nv19iABYWC4iAq1oX1w4Bn0vfg==}
+  '@next/swc-win32-x64-msvc@16.4.0':
+    resolution: {integrity: sha512-6/33lCuxpdHUy27RegyGM/5uTpF7YZd3UR4D0gpkOA/tWY5YR7msbQjqPgCZmSmxrrTLGCXYA4A8vT2H5DPGTQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -1574,8 +1568,8 @@ packages:
       react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
       react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
-  next@16.3.8:
-    resolution: {integrity: sha512-U7QEZaTini6wKrb8A8hqLLqYQyCetegKjCpJOyxk642vWoMoU1x5PyZCJFvgYgiptA8xc5j/9xYlZFO7w9Sjmw==}
+  next@16.4.0:
+    resolution: {integrity: sha512-N2C+9q89Z/oLrsepSRS4jRMtwmUZAoZuAHU0e9T6+sAB5DdhADmrnOW+zjYijlrYFmVfmQhGVGy9eMFoB7UgKg==}
     engines: {node: '>=20.9.0'}
     hasBin: true
     peerDependencies:
@@ -2019,11 +2013,6 @@ snapshots:
       - react
       - react-redux
 
-  '@descope/core-js-sdk@2.74.0':
-    dependencies:
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-
   '@descope/core-js-sdk@2.75.0':
     dependencies:
       jwt-decode: 4.0.0
@@ -2031,17 +2020,17 @@ snapshots:
 
   '@descope/escape-markdown@0.1.6': {}
 
-  '@descope/nextjs-sdk@0.16.12(@reduxjs/toolkit@2.11.2(react@19.2.1))(@types/react@19.2.7)(immer@10.2.0)(next@16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(redux-thunk@3.1.0(redux@5.0.1))(redux@5.0.1)':
+  '@descope/nextjs-sdk@0.16.12(@reduxjs/toolkit@2.11.2(react@19.2.1))(@types/react@19.2.7)(immer@10.2.0)(next@16.4.0(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(redux-thunk@3.1.0(redux@5.0.1))(redux@5.0.1)':
     dependencies:
       '@descope/core-js-sdk': 2.75.0
       '@descope/node-sdk': 2.8.0
       '@descope/react-sdk': 3.3.14(@reduxjs/toolkit@2.11.2(react@19.2.1))(@types/react@19.2.7)(immer@10.2.0)(react@19.2.1)(redux-thunk@3.1.0(redux@5.0.1))(redux@5.0.1)
       '@descope/web-component': 4.4.8(@reduxjs/toolkit@2.11.2(react@19.2.1))(immer@10.2.0)(redux-thunk@3.1.0(redux@5.0.1))(redux@5.0.1)
       '@types/react': 19.2.7
-      next: 16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      next: 16.4.0(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
-      '@descope/web-js-sdk': 1.54.0
+      '@descope/web-js-sdk': 1.54.1
     transitivePeerDependencies:
       - '@reduxjs/toolkit'
       - encoding
@@ -2053,7 +2042,7 @@ snapshots:
 
   '@descope/node-sdk@2.8.0':
     dependencies:
-      '@descope/core-js-sdk': 2.74.0
+      '@descope/core-js-sdk': 2.75.0
       cross-fetch: 4.1.0
       jose: 5.2.2
       tslib: 2.8.1
@@ -2204,15 +2193,6 @@ snapshots:
       - immer
       - redux
       - redux-thunk
-
-  '@descope/web-js-sdk@1.54.0':
-    dependencies:
-      '@descope/core-js-sdk': 2.74.0
-      '@fingerprintjs/fingerprintjs-pro': 3.11.6
-      js-cookie: 3.0.8
-      jwt-decode: 4.0.0
-      tslib: 2.8.1
-    optional: true
 
   '@descope/web-js-sdk@1.54.1':
     dependencies:
@@ -2373,30 +2353,30 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@next/env@16.3.8': {}
+  '@next/env@16.4.0': {}
 
-  '@next/swc-darwin-arm64@16.3.8':
+  '@next/swc-darwin-arm64@16.4.0':
     optional: true
 
-  '@next/swc-darwin-x64@16.3.8':
+  '@next/swc-darwin-x64@16.4.0':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@16.3.8':
+  '@next/swc-linux-arm64-gnu@16.4.0':
     optional: true
 
-  '@next/swc-linux-arm64-musl@16.3.8':
+  '@next/swc-linux-arm64-musl@16.4.0':
     optional: true
 
-  '@next/swc-linux-x64-gnu@16.3.8':
+  '@next/swc-linux-x64-gnu@16.4.0':
     optional: true
 
-  '@next/swc-linux-x64-musl@16.3.8':
+  '@next/swc-linux-x64-musl@16.4.0':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@16.3.8':
+  '@next/swc-win32-arm64-msvc@16.4.0':
     optional: true
 
-  '@next/swc-win32-x64-msvc@16.3.8':
+  '@next/swc-win32-x64-msvc@16.4.0':
     optional: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -3442,9 +3422,9 @@ snapshots:
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
 
-  next@16.3.8(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+  next@16.4.0(@types/node@22.19.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
-      '@next/env': 16.3.8
+      '@next/env': 16.4.0
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.10.8
       caniuse-lite: 1.0.30001759
@@ -3453,14 +3433,14 @@ snapshots:
       react-dom: 19.2.1(react@19.2.1)
       styled-jsx: 5.1.6(react@19.2.1)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 16.3.8
-      '@next/swc-darwin-x64': 16.3.8
-      '@next/swc-linux-arm64-gnu': 16.3.8
-      '@next/swc-linux-arm64-musl': 16.3.8
-      '@next/swc-linux-x64-gnu': 16.3.8
-      '@next/swc-linux-x64-musl': 16.3.8
-      '@next/swc-win32-arm64-msvc': 16.3.8
-      '@next/swc-win32-x64-msvc': 16.3.8
+      '@next/swc-darwin-arm64': 16.4.0
+      '@next/swc-darwin-x64': 16.4.0
+      '@next/swc-linux-arm64-gnu': 16.4.0
+      '@next/swc-linux-arm64-musl': 16.4.0
+      '@next/swc-linux-x64-gnu': 16.4.0
+      '@next/swc-linux-x64-musl': 16.4.0
+      '@next/swc-win32-arm64-msvc': 16.4.0
+      '@next/swc-win32-x64-msvc': 16.4.0
       sharp: 0.35.4(@types/node@22.19.1)
     transitivePeerDependencies:
       - '@babel/core'
